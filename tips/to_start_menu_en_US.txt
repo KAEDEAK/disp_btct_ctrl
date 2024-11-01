@@ -1,0 +1,55 @@
+How to Call a Python Script from a Batch File and Register it in the
+Windows 11 Start Menu
+
+Overview
+This document explains how to execute a Python script from a batch file
+and register that batch file in the Windows 11 Start Menu. This will
+allow you to run the Python script with a single click from the Start
+Menu.
+
+Prerequisites
+- Python is installed and added to the PATH environment variable.
+- The Python script you want to call is saved in any directory.
+
+Steps
+
+1. Creating the Batch File  
+   Create a batch file to call the Python script.
+
+   - Open a text editor, such as Notepad, and write the following:
+
+       py disp_btct_ctrl.py -target "\\.\DISPLAY5" -brightness 10 -contrast 30
+
+   - Save the file with a name. For example, name it brightness_middle.bat.
+
+2. Create a Shortcut for the Batch File
+
+   - Create a shortcut in the same directory (or any folder) for the
+     batch file (e.g., run_python_script.bat).
+     - Right-click on the file and select “Create shortcut.”
+
+3. Configure the Shortcut for Registration in the Start Menu
+
+   - Open the properties of the shortcut.
+     - Right-click on the shortcut and select “Properties.”
+
+   - Edit the “Target” field as follows:
+     - Add cmd.exe /c at the beginning, and surround the original path
+       with double quotes (" ").
+
+       Example:
+       cmd.exe /c "C:\your_path\bightness_middle.bat"
+
+   - Click “Apply” to save the settings.
+
+   - Change the icon or filename of the shortcut to make it easier to
+     recognize in the Start Menu.
+     - For example, naming it something like "Brightness 10" can make it
+       more identifiable.
+
+   - Right-click on the shortcut and select “Pin to Start.”
+
+Now, you can run the Python script via the batch file directly from the
+Start Menu. This method allows you to register the Python script in the
+Start Menu and execute it with a single click.
+
